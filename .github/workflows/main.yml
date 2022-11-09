@@ -12,11 +12,9 @@ jobs:
     runs-on: Ubuntu-latest
 
     steps:
-      - name: "list all files"
-        run: ls
-      
       - uses : actions/checkout@v3
-      - name: "list all files after"
-        run: ls 
+
+      - name: "login"
+        run: docker login --username ${{ secrets.USERNAME }} --password ${{ secrets.TOKEN }}
 
 
