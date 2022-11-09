@@ -15,8 +15,8 @@ jobs:
       - name: "list all files"
         run: ls
       
-      - name: "PWD"
-        run: pwd
-  
+      - uses : actions/checkout@v3
+      - name: "list all files after"
+        run: ls 
 
 
